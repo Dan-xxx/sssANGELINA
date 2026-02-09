@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Для тебя ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="heartContainer"></div>
+
+<nav>
+  <button onclick="showTab('home')">Главная</button>
+  <button onclick="showTab('gallery')">Фото</button>
+  <button onclick="showTab('words')">Слова</button>
+  <button onclick="showTab('final')">Финал 🔒</button>
+</nav>
+
+<!-- Главная с таймером -->
+<section id="home" class="tab active">
+  <div class="home-container">
+    <h1>До нашего момента осталось</h1>
+    <div id="timer"></div>
+  </div>
+</section>
+
+<!-- Галерея -->
+<section id="gallery" class="tab">
+  <h2>Наши моменты 📸</h2>
+  <button id="newPhotosBtn">Новые фото 🌟</button>
+  <div id="photoContainer"></div>
+</section>
+
+
+<section id="words" class="tab">
+  <h2>Слова для тебя 💌</h2>
+  <button id="newTextBtn">Обновить 💖</button>
+  <!-- Обернём в блок с фиксированным стилем -->
+  <div id="textContainer" style="
+    max-width:800px; 
+    margin:20px auto; 
+    text-align:center; 
+    font-size:22px; 
+    line-height:1.6; 
+    padding:20px; 
+    border-radius:20px; 
+    background:rgba(255,255,255,0.7); 
+    overflow-y:auto; 
+    max-height:70vh;
+    display:block;">
+  </div>
+</section>
+
+
+
+<!-- Финал -->
+<section id="final" class="tab">
+
+  <div id="startFinalContainer">
+    <button id="startFinalBtn">Скоро… ❤️</button>
+  </div>
+
+  <div id="quizContainer" style="display:none">
+    <h2>Ответь на вопросы ❤️</h2>
+    <p id="question"></p>
+    <input id="answer" placeholder="Твой ответ...">
+    <button onclick="checkAnswer()">Ответить</button>
+    <p id="feedback"></p>
+  </div>
+
+  <div id="introVideoContainer" style="display:none">
+    <button id="watchIntroBtn" onclick="watchIntroVideo()">Смотреть интро 🎬</button>
+  </div>
+
+  <div id="finalVideoContainer" style="display:none">
+    <button id="watchFinalBtn" onclick="watchFinalVideo()">Смотреть финальное видео 🎥</button>
+  </div>
+
+  <div id="finalScreen" style="display:none; padding:50px; text-align:center;">
+    <h1>С 14 февраля ❤️</h1>
+    <p id="finalText" style="font-size:24px; line-height:1.6; max-width:800px; margin:0 auto;">
+      Моя любимая Ангелина,<br>
+      Ты делаешь каждый день ярче и светлее.<br>
+      Я безумно тебя люблю ❤️<br>
+      Спасибо, что ты есть в моей жизни.<br>
+      С 14 февраля!
+    </p>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
